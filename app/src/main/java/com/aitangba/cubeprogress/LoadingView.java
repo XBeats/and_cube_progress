@@ -87,7 +87,7 @@ public class LoadingView extends View {
         mLeftPath.lineTo(SIDE_LENGTH, 0);
         mLeftPath.close();
 
-        // init left
+        // init right
         mRightPaint = new Paint();
         mRightPaint.setColor(Color.parseColor("#FAECA4"));
 
@@ -123,7 +123,7 @@ public class LoadingView extends View {
             }
         });
 
-        //轨迹
+        //init path of the four cubes
         Path firstMovePath = new Path();
         firstMovePath.moveTo(0, 0);
         firstMovePath.lineTo(SIDE_LENGTH * 2 * cos30, SIDE_LENGTH * 2  * sin30);
