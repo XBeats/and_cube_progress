@@ -13,6 +13,12 @@
  3. 接下来就是要确定每个正方体的移动轨迹，就是一个选择参考点的过程，如图中选择每个正方体中的A点作为参考点，控制A点的移动，就能达到整体的移动效果  
  ![image](https://raw.githubusercontent.com/XBeats/and_cube_progress/master/screenshot/one_cube_a.png)
  4. 阴影部分其实和上部分一致，只是位置移动到了正方体的下面，处理起来还是比较简单的
+ 5. 将四个立方体按照从右往左，从上往下，依次编号（1，2，3，4） 
+ 6. 动画分成两部分，一是上下平移，二是左右平移；并用变量`mIsFirstPart`来区分（解决多层覆盖绘制过程）
+ 7. 实际上整个过程只用了一个动画来完成的，编号1，4的立方体只移动了动画的上半部分，所以需要控制其最大/最小值。编号2，3的立方体移动了动画的完整过程。
+ 
+>注：在立方体移动过程中，需要注意四个立方体绘制的先后顺序，不然会出现重叠情况，难以产生立体感。
+
 
 ## 效果图  
 ![image](https://raw.githubusercontent.com/XBeats/and_cube_progress/master/screenshot/cube_progress.gif)
